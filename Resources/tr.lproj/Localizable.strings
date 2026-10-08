@@ -85,7 +85,7 @@
 "notice.lockFailedCode" = "Klavye kilitlenemedi (%@).";
 "notice.lockFailed" = "Kilitlenemedi: %@";
 "notice.unlockFailed" = "Kilit açılamadı, kilit hizmeti yanıt vermedi. Bir kez daha dene.";
-"notice.expired" = "Süre doldu. Klavye yeniden açıldı.";
+"notice.expired" = "Kilit sona erdi. Klavye yeniden açıldı.";
 "notice.helperGone" = "Kilit hizmeti yanıt vermiyor. Klavye serbest bırakıldı.";
 "notice.release.screenLock" = "Ekran kilitlendiği için klavye serbest bırakıldı.";
 "notice.release.session" = "Kullanıcı oturumu değiştiği için klavye serbest bırakıldı.";

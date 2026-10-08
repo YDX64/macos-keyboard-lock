@@ -85,7 +85,7 @@
 "notice.lockFailedCode" = "Could not lock the keyboard (%@).";
 "notice.lockFailed" = "Could not lock: %@";
 "notice.unlockFailed" = "Could not unlock: the lock service did not respond. Try once more.";
-"notice.expired" = "Time is up. The keyboard is unlocked again.";
+"notice.expired" = "The lock ended. The keyboard is unlocked again.";
 "notice.helperGone" = "The lock service is not responding. The keyboard is released.";
 "notice.release.screenLock" = "The screen was locked, so the keyboard was released.";
 "notice.release.session" = "The user session changed, so the keyboard was released.";
