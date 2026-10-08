@@ -1,0 +1,119 @@
+/* Keyboard Lock: English (default language). Keep keys identical in every language. */
+
+/* Status card */
+"status.setupNeeded.title" = "Setup required";
+"status.locked.title" = "Keyboard locked";
+"status.unlocked.title" = "Keyboard unlocked";
+"status.working" = "Working…";
+"status.setupHint" = "Finish the one-time setup to enable locking.";
+"status.waiting" = "Keyboard unplugged. It locks again as soon as it is plugged back in.";
+"status.lockedTimeLeft" = "%@ · %@ left";
+"status.lockedKeysOff" = "%@ · keys are off, backlight stays on";
+"status.selectedKeyboard" = "Selected keyboard";
+"status.idleHint" = "Lock it while the kids play. The backlight stays on.";
+
+/* Short status line (menu bar menu, tooltip) */
+"statusLine.working" = "Working…";
+"statusLine.setup" = "Setup required";
+"statusLine.waiting" = "Locked · keyboard unplugged";
+"statusLine.timeLeft" = "Locked · %@ left";
+"statusLine.locked" = "Locked";
+"statusLine.unlocked" = "Keyboard unlocked";
+
+/* Setup card */
+"setup.install.title" = "One-time setup";
+"setup.install.body" = "The helper is installed once, with your administrator password, as a system service. After that, locking and unlocking never ask for a password. The app places a protected copy of itself in the Applications folder.";
+"setup.outdated.title" = "Lock helper is out of date";
+"setup.outdated.body" = "The app was updated. Refreshing the helper needs your administrator password once.";
+"setup.notResponding.title" = "Lock helper is not responding";
+"setup.notResponding.body" = "The installed service is not running. Reinstalling fixes it (password needed once).";
+"setup.install.button" = "Install";
+"setup.update.button" = "Update";
+"setup.repair.button" = "Repair";
+
+/* Main controls */
+"button.lock" = "Lock Keyboard";
+"button.unlock" = "Unlock";
+"section.keyboards" = "Keyboards";
+"section.autoUnlock" = "Auto-unlock";
+"kb.builtIn" = "Built-in keyboard";
+"kb.usb" = "USB keyboard";
+"kb.bluetooth" = "Bluetooth keyboard";
+"kb.external" = "External keyboard";
+"kb.externalVia" = "External keyboard (%@)";
+"kb.alwaysOn" = "Always on";
+"kb.none" = "No keyboard found.";
+"kb.noExternal" = "No external keyboard. Plug in a USB keyboard and it shows up here.";
+"duration.unlimited" = "Unlimited";
+"duration.min15" = "15 min";
+"duration.min30" = "30 min";
+"duration.hour1" = "1 hour";
+"duration.hour2" = "2 hours";
+"notice.openInputMonitoring" = "Open Input Monitoring settings";
+
+/* Footer */
+"footer.hotkey" = "Shortcut: ⌃⌥⌘L also toggles the lock (from the built-in keyboard).";
+"footer.control" = "You can also control it from the menu bar and the Dock. The lock stays on when you close the window.";
+"footer.alwaysWorks" = "The built-in keyboard, mouse and trackpad always keep working.";
+"footer.uninstall" = "Remove lock helper…";
+"footer.language" = "Language";
+"lang.system" = "System";
+"lang.en" = "English";
+"lang.tr" = "Türkçe";
+
+/* Menu bar and Dock menu */
+"menu.setup" = "Setup required… (open window)";
+"menu.lock" = "Lock Keyboard";
+"menu.unlock" = "Unlock";
+"menu.autoUnlock" = "Auto-unlock";
+"menu.showWindow" = "Show Window";
+"menu.uninstall" = "Remove Helper…";
+"menu.quit" = "Quit Keyboard Lock";
+"unit.minutes" = "%d min";
+"unit.seconds" = "%d s";
+
+/* Notices */
+"notice.needSetup" = "Finish the one-time setup first. After that, locking never asks for a password.";
+"notice.permissionPrompt" = "In the \"Input Monitoring\" dialog macOS shows, click Allow. If no dialog appears, open the setting with the button below and switch Keyboard Lock on. Then click Lock Keyboard again.";
+"notice.permissionDenied" = "macOS is not granting Input Monitoring to this app. Even if Keyboard Lock looks switched on in the list, the permission may belong to an older build. Select it, remove it with −, quit and reopen the app, then click Lock Keyboard. macOS will ask again; click Allow.";
+"notice.noKeyboardSelected" = "No external keyboard is selected.";
+"notice.noBuiltIn1h" = "This Mac has no built-in keyboard. For safety the lock lasts at most 1 hour; you can unlock earlier with the button.";
+"notice.noBuiltInUnlock" = "This Mac has no built-in keyboard. Unlock it with the mouse using the button.";
+"notice.partialLock" = "Keyboard locked, but one key interface could not be locked (%@). If some keys still work, quit the keyboard's own software (for example Razer Synapse) and lock again.";
+"notice.noDevice" = "The selected keyboard was not found. Make sure it is plugged in.";
+"notice.exclusive" = "Another app is using this keyboard exclusively (Karabiner, Razer Synapse, …). Quit it and try again.";
+"notice.lockFailedCode" = "Could not lock the keyboard (%@).";
+"notice.lockFailed" = "Could not lock: %@";
+"notice.unlockFailed" = "Could not unlock: the lock service did not respond. Try once more.";
+"notice.expired" = "Time is up. The keyboard is unlocked again.";
+"notice.helperGone" = "The lock service is not responding. The keyboard is released.";
+"notice.release.screenLock" = "The screen was locked, so the keyboard was released.";
+"notice.release.session" = "The user session changed, so the keyboard was released.";
+"notice.release.sleep" = "The Mac went to sleep, so the keyboard was released.";
+"notice.installDone" = "Setup complete. Locking never asks for a password from now on.";
+"notice.installCancelled" = "Setup cancelled.";
+"notice.installFailed" = "Setup failed: %@";
+"notice.installTimeout" = "The helper was installed but did not respond. Try again in a few seconds.";
+"notice.signatureUnreadable" = "Could not read this app's code signature. Rebuild it with ./build.sh and try again.";
+"notice.uninstallDone" = "Lock helper removed.";
+"notice.uninstallCancelled" = "Removal cancelled.";
+"notice.uninstallFailed" = "Could not remove: %@";
+"notice.unlockFirstUninstall" = "Unlock the keyboard first, then remove the helper.";
+"notice.unlockFirstInstall" = "Unlock the keyboard first, then run the setup or update.";
+
+/* Alerts and administrator prompts */
+"alert.uninstall.title" = "Remove the lock helper?";
+"alert.uninstall.message" = "The lock service is deleted from the system. To lock again you will need to repeat the setup (administrator password once). The app itself is not deleted.";
+"alert.uninstall.confirm" = "Remove";
+"alert.uninstall.cancel" = "Cancel";
+"prompt.install" = "Keyboard Lock needs administrator permission for the one-time setup. It places a protected copy of the app in Applications and adds the lock service. Afterwards locking never asks for a password.";
+"prompt.uninstall" = "Keyboard Lock needs administrator permission to remove the lock service.";
+
+/* Errors */
+"err.notPermitted" = "permission denied";
+"err.exclusive" = "in use by another app";
+"err.notPrivileged" = "not privileged";
+"err.code" = "error 0x%08x";
+"err.promptFailed" = "Could not open the password prompt: %@";
+"err.unknown" = "Unknown error (code %d).";
+"err.noReply" = "The lock service did not respond.";

@@ -1,0 +1,119 @@
+/* Keyboard Lock: Türkçe. Anahtarlar tüm dillerde birebir aynı olmalı. */
+
+/* Durum kartı */
+"status.setupNeeded.title" = "Kurulum gerekli";
+"status.locked.title" = "Klavye kilitli";
+"status.unlocked.title" = "Klavye açık";
+"status.working" = "Çalışıyor…";
+"status.setupHint" = "Kilitlemek için önce tek seferlik kurulumu tamamla.";
+"status.waiting" = "Klavye çıkarılmış. Geri takılınca otomatik olarak yeniden kilitlenir.";
+"status.lockedTimeLeft" = "%@ · %@ kaldı";
+"status.lockedKeysOff" = "%@ · tuşlar çalışmıyor, ışıklar yanıyor";
+"status.selectedKeyboard" = "Seçili klavye";
+"status.idleHint" = "Çocuklar oynarken kilitle. Işıklar yanmaya devam eder.";
+
+/* Kısa durum satırı (menü çubuğu menüsü, ipucu) */
+"statusLine.working" = "Çalışıyor…";
+"statusLine.setup" = "Kurulum gerekli";
+"statusLine.waiting" = "Kilitli · klavye çıkarılmış";
+"statusLine.timeLeft" = "Kilitli · %@ kaldı";
+"statusLine.locked" = "Kilitli";
+"statusLine.unlocked" = "Klavye açık";
+
+/* Kurulum kartı */
+"setup.install.title" = "Tek seferlik kurulum";
+"setup.install.body" = "Yardımcı, yönetici şifrenle bir kez sistem hizmeti olarak kurulur. Sonrasında kilitlerken ve açarken hiç şifre sorulmaz. Uygulama, korumalı bir kopyasını Applications klasörüne yerleştirir.";
+"setup.outdated.title" = "Kilit yardımcısı güncel değil";
+"setup.outdated.body" = "Uygulama güncellendi. Yardımcıyı yenilemek için bir kez yönetici şifresi gerekir.";
+"setup.notResponding.title" = "Kilit yardımcısı yanıt vermiyor";
+"setup.notResponding.body" = "Kurulu hizmet çalışmıyor. Yeniden kurmak sorunu çözer (bir kez şifre gerekir).";
+"setup.install.button" = "Kur";
+"setup.update.button" = "Güncelle";
+"setup.repair.button" = "Onar";
+
+/* Ana kontroller */
+"button.lock" = "Klavyeyi Kilitle";
+"button.unlock" = "Kilidi Aç";
+"section.keyboards" = "Klavyeler";
+"section.autoUnlock" = "Otomatik aç";
+"kb.builtIn" = "Dahili klavye";
+"kb.usb" = "USB klavye";
+"kb.bluetooth" = "Bluetooth klavye";
+"kb.external" = "Harici klavye";
+"kb.externalVia" = "Harici klavye (%@)";
+"kb.alwaysOn" = "Her zaman açık";
+"kb.none" = "Klavye bulunamadı.";
+"kb.noExternal" = "Harici klavye yok. USB klavyeyi tak, burada kendiliğinden görünür.";
+"duration.unlimited" = "Sınırsız";
+"duration.min15" = "15 dk";
+"duration.min30" = "30 dk";
+"duration.hour1" = "1 saat";
+"duration.hour2" = "2 saat";
+"notice.openInputMonitoring" = "Girdi İzleme ayarlarını aç";
+
+/* Alt bilgi */
+"footer.hotkey" = "Kısayol: ⌃⌥⌘L ile de kilidi açıp kapatabilirsin (dahili klavyeden).";
+"footer.control" = "Menü çubuğundan ve Dock'tan da kontrol edebilirsin. Pencereyi kapatsan da kilit sürer.";
+"footer.alwaysWorks" = "Dahili klavye, fare ve izleme dörtgeni her zaman çalışır.";
+"footer.uninstall" = "Kilit yardımcısını kaldır…";
+"footer.language" = "Dil";
+"lang.system" = "Sistem";
+"lang.en" = "English";
+"lang.tr" = "Türkçe";
+
+/* Menü çubuğu ve Dock menüsü */
+"menu.setup" = "Kurulum gerekli… (pencereyi aç)";
+"menu.lock" = "Klavyeyi Kilitle";
+"menu.unlock" = "Kilidi Aç";
+"menu.autoUnlock" = "Otomatik aç";
+"menu.showWindow" = "Pencereyi Göster";
+"menu.uninstall" = "Yardımcıyı Kaldır…";
+"menu.quit" = "Klavye Kilidi'nden Çık";
+"unit.minutes" = "%d dk";
+"unit.seconds" = "%d sn";
+
+/* Bildirimler */
+"notice.needSetup" = "Önce tek seferlik kurulumu yap. Sonrasında kilitlerken hiç şifre sorulmaz.";
+"notice.permissionPrompt" = "macOS'un açtığı \"Girdi İzleme\" penceresinde İzin Ver'e bas. Pencere çıkmadıysa aşağıdaki düğmeyle ayarı aç ve Keyboard Lock'u etkinleştir. Sonra Klavyeyi Kilitle'ye tekrar bas.";
+"notice.permissionDenied" = "macOS bu uygulamaya Girdi İzleme izni vermiyor. Listede Keyboard Lock açık görünse bile izin eski bir sürüme ait olabilir. Listeden seçip − ile sil, uygulamayı kapatıp yeniden aç ve Klavyeyi Kilitle'ye bas. macOS izni yeniden soracak, İzin Ver de.";
+"notice.noKeyboardSelected" = "Kilitlenecek bir harici klavye seçili değil.";
+"notice.noBuiltIn1h" = "Bu Mac'te dahili klavye yok. Güvenlik için kilit en çok 1 saat sürer; istersen düğmeyle daha önce açabilirsin.";
+"notice.noBuiltInUnlock" = "Bu Mac'te dahili klavye yok. Kilidi fareyle düğmeden açabilirsin.";
+"notice.partialLock" = "Klavye kilitlendi, ama bir tuş arayüzü kilitlenemedi (%@). Bazı tuşlar hâlâ çalışırsa klavyenin kendi yazılımını (ör. Razer Synapse) kapatıp tekrar kilitle.";
+"notice.noDevice" = "Seçili klavye bulunamadı. Takılı olduğundan emin ol.";
+"notice.exclusive" = "Bu klavyeyi başka bir uygulama özel olarak kullanıyor (Karabiner, Razer Synapse vb.). O uygulamayı kapatıp tekrar dene.";
+"notice.lockFailedCode" = "Klavye kilitlenemedi (%@).";
+"notice.lockFailed" = "Kilitlenemedi: %@";
+"notice.unlockFailed" = "Kilit açılamadı, kilit hizmeti yanıt vermedi. Bir kez daha dene.";
+"notice.expired" = "Süre doldu. Klavye yeniden açıldı.";
+"notice.helperGone" = "Kilit hizmeti yanıt vermiyor. Klavye serbest bırakıldı.";
+"notice.release.screenLock" = "Ekran kilitlendiği için klavye serbest bırakıldı.";
+"notice.release.session" = "Kullanıcı oturumu değiştiği için klavye serbest bırakıldı.";
+"notice.release.sleep" = "Mac uykuya geçtiği için klavye serbest bırakıldı.";
+"notice.installDone" = "Kurulum tamam. Artık kilitlerken şifre sorulmaz.";
+"notice.installCancelled" = "Kurulum iptal edildi.";
+"notice.installFailed" = "Kurulum başarısız: %@";
+"notice.installTimeout" = "Yardımcı kuruldu ama yanıt vermedi. Birkaç saniye sonra tekrar dene.";
+"notice.signatureUnreadable" = "Bu uygulamanın kod imzası okunamadı. ./build.sh ile yeniden derleyip tekrar dene.";
+"notice.uninstallDone" = "Kilit yardımcısı kaldırıldı.";
+"notice.uninstallCancelled" = "Kaldırma iptal edildi.";
+"notice.uninstallFailed" = "Kaldırılamadı: %@";
+"notice.unlockFirstUninstall" = "Önce klavyenin kilidini aç, sonra yardımcıyı kaldır.";
+"notice.unlockFirstInstall" = "Önce klavyenin kilidini aç, sonra kurulumu ya da güncellemeyi yap.";
+
+/* Uyarı pencereleri ve yönetici izni metinleri */
+"alert.uninstall.title" = "Kilit yardımcısı kaldırılsın mı?";
+"alert.uninstall.message" = "Kilit hizmeti sistemden silinir. Yeniden kilitlemek için kurulumu tekrar yapman gerekir (bir kez yönetici şifresi). Uygulamanın kendisi silinmez.";
+"alert.uninstall.confirm" = "Kaldır";
+"alert.uninstall.cancel" = "Vazgeç";
+"prompt.install" = "Keyboard Lock tek seferlik kurulum için yönetici izni istiyor. Uygulamanın korumalı bir kopyasını Applications klasörüne yerleştirir ve kilit hizmetini ekler. Sonrasında kilitlerken şifre sorulmaz.";
+"prompt.uninstall" = "Keyboard Lock, kilit hizmetini kaldırmak için yönetici izni istiyor.";
+
+/* Hatalar */
+"err.notPermitted" = "izin yok";
+"err.exclusive" = "başka bir uygulama kullanıyor";
+"err.notPrivileged" = "yetki yok";
+"err.code" = "hata 0x%08x";
+"err.promptFailed" = "Şifre penceresi açılamadı: %@";
+"err.unknown" = "Bilinmeyen hata (kod %d).";
+"err.noReply" = "Kilit hizmeti yanıt vermedi.";
