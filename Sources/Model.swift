@@ -86,8 +86,8 @@ final class Model: ObservableObject {
         watcher.start()
         refreshDevices()
         tick()
-        let t = Timer(timeInterval: 1, repeats: true) { [weak self] _ in
-            Task { @MainActor in self?.tick() }
+        let t = Timer(timeInterval: 1, repeats: true) { _ in
+            Task { @MainActor in Model.shared.tick() }
         }
         // .common: keep polling while a menu is open or the window is being dragged.
         RunLoop.main.add(t, forMode: .common)
@@ -98,11 +98,12 @@ final class Model: ObservableObject {
     /// Release the keyboard when the screen locks, the user session changes or the Mac sleeps.
     /// Otherwise (especially on Macs without a built-in keyboard) a password could not be typed.
     private func observeSessionEnd() {
-        let release: (String) -> Void = { [weak self] key in
+        let release: (String) -> Void = { key in
             Task { @MainActor in
-                guard let self, self.isLocked, !self.busy else { return }
-                self.unlock()
-                self.notice = Notice(text: tr(key), kind: .info)
+                let model = Model.shared
+                guard model.isLocked, !model.busy else { return }
+                model.unlock()
+                model.notice = Notice(text: tr(key), kind: .info)
             }
         }
         DistributedNotificationCenter.default().addObserver(
@@ -171,7 +172,7 @@ final class Model: ObservableObject {
 
     // MARK: Polling (heartbeat)
 
-    private func tick() {
+    fileprivate func tick() {
         refreshDevices()
         guard !busy, !installing else { return }
         let sock = socket
@@ -280,9 +281,10 @@ final class Model: ObservableObject {
             notice = Notice(text: tr("notice.noBuiltIn1h"), kind: .info)
         }
         let sock = socket
+        let lockSeconds = secs
         Task {
             let outcome = await Task.detached(priority: .userInitiated) {
-                HelperControl.lock(socket: sock, seconds: secs, keys: keys)
+                HelperControl.lock(socket: sock, seconds: lockSeconds, keys: keys)
             }.value
             self.finishLock(outcome)
         }

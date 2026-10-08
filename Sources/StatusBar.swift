@@ -91,11 +91,15 @@ final class StatusBarController: NSObject, NSMenuDelegate {
         statusItem.button?.imagePosition = .imageLeading
         statusItem.button?.font = .monospacedDigitSystemFont(ofSize: 12, weight: .medium)
 
-        cancellable = Model.shared.objectWillChange.sink { [weak self] _ in
-            Task { @MainActor in self?.refresh() }
+        cancellable = Model.shared.objectWillChange.sink { _ in
+            Task { @MainActor in Self.current?.refresh() }
         }
+        Self.current = self
         refresh()
     }
+
+    /// The single status bar controller (the app creates exactly one).
+    private static weak var current: StatusBarController?
 
     /// The menu is rebuilt from the current state every time it opens.
     func menuNeedsUpdate(_ menu: NSMenu) {
@@ -132,8 +136,8 @@ final class StatusBarController: NSObject, NSMenuDelegate {
     private func setPulse(active: Bool) {
         if active {
             guard pulseTimer == nil else { return }
-            let t = Timer(timeInterval: 0.9, repeats: true) { [weak self] _ in
-                Task { @MainActor in self?.pulseStep() }
+            let t = Timer(timeInterval: 0.9, repeats: true) { _ in
+                Task { @MainActor in Self.current?.pulseStep() }
             }
             RunLoop.main.add(t, forMode: .common)
             pulseTimer = t
@@ -209,11 +213,15 @@ final class DockController {
     private var badge: String?
 
     init() {
-        cancellable = Model.shared.objectWillChange.sink { [weak self] _ in
-            Task { @MainActor in self?.refresh() }
+        cancellable = Model.shared.objectWillChange.sink { _ in
+            Task { @MainActor in Self.current?.refresh() }
         }
+        Self.current = self
         refresh()
     }
+
+    /// The single Dock controller (the app creates exactly one).
+    private static weak var current: DockController?
 
     private func refresh() {
         let m = Model.shared
